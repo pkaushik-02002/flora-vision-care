@@ -5,6 +5,8 @@ import { CameraCapture } from '@/components/CameraCapture';
 import { PlantAnalysis } from '@/components/PlantAnalysis';
 import { PlantCard } from '@/components/PlantCard';
 import { Navigation } from '@/components/Navigation';
+import { CareCalendar } from '@/components/CareCalendar';
+import { Profile } from '@/components/Profile';
 import { Leaf, Camera, Users, CloudRain } from 'lucide-react';
 import heroImage from '@/assets/hero-plant.jpg';
 
@@ -195,12 +197,7 @@ const Index = () => {
       case 'analysis':
         return renderAnalysisView();
       case 'calendar':
-        return (
-          <div className="text-center py-20">
-            <h2 className="text-2xl font-bold mb-4">Care Calendar</h2>
-            <p className="text-muted-foreground">Coming soon!</p>
-          </div>
-        );
+        return <CareCalendar plants={mockPlants} />;
       case 'community':
         return (
           <div className="text-center py-20">
@@ -208,6 +205,8 @@ const Index = () => {
             <p className="text-muted-foreground">Coming soon!</p>
           </div>
         );
+      case 'profile':
+        return <Profile />;
       default:
         return renderHomeView();
     }
