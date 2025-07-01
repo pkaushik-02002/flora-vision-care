@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Camera, Users, Calendar, Leaf, User } from 'lucide-react';
+import { Camera, Users, Calendar, Leaf, User, DollarSign } from 'lucide-react';
 
 interface NavigationProps {
   currentView: string;
@@ -13,6 +13,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, onViewChang
     { id: 'camera', icon: Camera, label: 'Scan' },
     { id: 'calendar', icon: Calendar, label: 'Care' },
     { id: 'community', icon: Users, label: 'Community' },
+    { id: 'pricing', icon: DollarSign, label: 'Premium' },
     { id: 'profile', icon: User, label: 'Profile' },
   ];
 

@@ -7,6 +7,8 @@ import { PlantCard } from '@/components/PlantCard';
 import { Navigation } from '@/components/Navigation';
 import { CareCalendar } from '@/components/CareCalendar';
 import { Profile } from '@/components/Profile';
+import { Community } from '@/components/Community';
+import { PricingPage } from '@/components/PricingPage';
 import { Leaf, Camera, Users, CloudRain } from 'lucide-react';
 import heroImage from '@/assets/hero-plant.jpg';
 
@@ -199,12 +201,9 @@ const Index = () => {
       case 'calendar':
         return <CareCalendar plants={mockPlants} />;
       case 'community':
-        return (
-          <div className="text-center py-20">
-            <h2 className="text-2xl font-bold mb-4">Plant Community</h2>
-            <p className="text-muted-foreground">Coming soon!</p>
-          </div>
-        );
+        return <Community />;
+      case 'pricing':
+        return <PricingPage />;
       case 'profile':
         return <Profile />;
       default:
